@@ -2,23 +2,22 @@ import React, { useState } from 'react';
 import './oroscopo.css';
 import { calcularSigno, obtenerMensajeSigno } from './oroscopos';
 
-// Importar todas las imágenes con los nombres correctos
+
 import ariesImage from '../assets/imagenes/aries.png';
 import tauroImage from '../assets/imagenes/tauro.png';
-import geminisImage from '../assets/imagenes/gemini.png'; // <- gemini.png
+import geminisImage from '../assets/imagenes/gemini.png';
 import cancerImage from '../assets/imagenes/cancer.png';
 import leoImage from '../assets/imagenes/leo.png';
 import virgoImage from '../assets/imagenes/virgo.png';
-import libraImage from '../assets/imagenes/libra.png'; // <- Cambié de virgo.png a libra.png
-import escorpioImage from '../assets/imagenes/scorpion.png'; // <- scorpion.png
+import libraImage from '../assets/imagenes/libra.png';
+import escorpioImage from '../assets/imagenes/scorpion.png';
 import sagitarioImage from '../assets/imagenes/sagitario.png';
 import capricornioImage from '../assets/imagenes/capricornio.png';
-import acuarioImage from '../assets/imagenes/aquarius.png'; // <- aquarius.png
-import piscisImage from '../assets/imagenes/pisces.png'; // <- pisces.png
+import acuarioImage from '../assets/imagenes/aquarius.png';
+import piscisImage from '../assets/imagenes/pisces.png';
 
-// Si no tienes default.png, crea uno o usa una imagen existente
-import defaultImage from '../assets/imagenes/aries.png'; // Usa cualquier imagen como fallback
 
+import defaultImage from '../assets/imagenes/aries.png'; 
 const Oroscopo = () => {
   const [nombre, setNombre] = useState('');
   const [fechaNacimiento, setFechaNacimiento] = useState('');
@@ -99,7 +98,7 @@ const Oroscopo = () => {
             alt={resultado.signo}
             className="signo-imagen"
             onError={(e) => {
-              // Si falla, usar una imagen por defecto
+            
               e.target.src = ariesImage;
             }}
           />
